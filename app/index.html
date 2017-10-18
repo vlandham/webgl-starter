@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, shrink-to-fit=0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <title>webgl</title>
+  <style>
+  @font-face {
+    font-family: 'Proxima Nova';
+    font-weight: 600;
+    src: url('assets/font/ProximaNovaBold.woff');
+  }
+  canvas {
+    display: block;
+    z-index: 10;
+  }
+  * {
+    -webkit-touch-callout:none;
+    -webkit-text-size-adjust:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-user-select:none;
+  }
+  body {
+    font-family: 'Proxima Nova';
+    font-weight: 600;
+    overflow: hidden;
+    margin: 0;
+  }
+  .noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Chrome/Safari/Opera */
+       -khtml-user-select: none; /* Konqueror */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    not supported by any browser */
+  }
+  .clickable {
+    cursor: pointer;
+  }
+  .grab {
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+  }
+  .grabbing {
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+  }
+  .info-container {
+    opacity: 0.5;
+    z-index: -10;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    font-size: 10px;
+    text-align: center;
+    margin: auto;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  </style>
+</head>
+<body>
+  <canvas id="canvas" class="noselect"></canvas>
+  <script src="vendor/three.min.js"></script>
+  <script src="bundle.js"></script>
+</body>
+</html>
